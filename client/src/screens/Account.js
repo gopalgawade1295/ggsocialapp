@@ -75,7 +75,7 @@ const Account = () => {
         setMessage("Please wait!");
         setOpen(true);
         try {
-            const res = await axios.put(`${process.env.REACT_APP_SECRET_KEY}/users/edit/${usersaved._id}`,
+            const res = await axios.put(`${process.env.REACT_APP_SECRET_KEY}users/edit/${usersaved._id}`,
                 {
                     firstName: profile.first,
                     lastName: profile.last,
@@ -134,7 +134,7 @@ const Account = () => {
         setMessage("Please wait!");
         setOpen(true);
         try {
-            const res = await axios.put(`${process.env.REACT_APP_SECRET_KEY}/users/edit/${usersaved._id}`,
+            const res = await axios.put(`${process.env.REACT_APP_SECRET_KEY}users/edit/${usersaved._id}`,
                 {
                     firstName: profile.first,
                     lastName: profile.last,

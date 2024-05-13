@@ -90,7 +90,7 @@ const Register = () => {
                 setOpen(true);
 
                 await axios.post(
-                    `${process.env.REACT_APP_SECRET_KEY}/auth/register`,
+                    `${process.env.REACT_APP_SECRET_KEY}auth/register`,
                     {
                         email: values.email,
                         password: values.password,

@@ -43,7 +43,7 @@ const Login = () => {
                 setOpen(true);
 
                 const res = await axios.post(
-                    `${process.env.REACT_APP_SECRET_KEY}/auth/login`,
+                    `${process.env.REACT_APP_SECRET_KEY}auth/login`,
                     {
                         email: values.email,
                         password: values.password

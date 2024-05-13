@@ -46,7 +46,7 @@ const Profile = () => {
     //Fetch Users
     const getUsers = async () => {
         try {
-            const res = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/users/all/${usersaved._id}`, {
+            const res = await axios.get(`${process.env.REACT_APP_SECRET_KEY}users/all/${usersaved._id}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: token,
@@ -63,7 +63,7 @@ const Profile = () => {
     //Get friends
     const getFriends = async () => {
         try {
-            const res = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/users/${userID}/friends`, {
+            const res = await axios.get(`${process.env.REACT_APP_SECRET_KEY}users/${userID}/friends`, {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: token,
@@ -79,7 +79,7 @@ const Profile = () => {
 
     const getUserMain = async () => {
         try {
-            const res = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/users/${usersaved._id}`, {
+            const res = await axios.get(`${process.env.REACT_APP_SECRET_KEY}users/${usersaved._id}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: token,
@@ -100,7 +100,7 @@ const Profile = () => {
     //Add/Remove friend
     const addremoveFriend = async (id, friendID) => {
         try {
-            await axios.patch(`${process.env.REACT_APP_SECRET_KEY}/users/${id}/${friendID}`, {}, {
+            await axios.patch(`${process.env.REACT_APP_SECRET_KEY}users/${id}/${friendID}`, {}, {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: token,
@@ -118,7 +118,7 @@ const Profile = () => {
     //Get User Posts
     const getUserPosts = async () => {
         try {
-            const res = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/posts/${userID}/posts`,
+            const res = await axios.get(`${process.env.REACT_APP_SECRET_KEY}posts/${userID}/posts`,
                 {
                     headers: {
                         'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ const Profile = () => {
     //Delete post
     const deletePost = async (id) => {
         try {
-            await axios.delete(`${process.env.REACT_APP_SECRET_KEY}/posts/delete/${id}`, {
+            await axios.delete(`${process.env.REACT_APP_SECRET_KEY}posts/delete/${id}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: token,
@@ -152,7 +152,7 @@ const Profile = () => {
     //like post
     const likePost = async (id, userId) => {
         try {
-            await axios.patch(`${process.env.REACT_APP_SECRET_KEY}/posts/${id}/like`, {
+            await axios.patch(`${process.env.REACT_APP_SECRET_KEY}posts/${id}/like`, {
                 userId: usersaved._id
             },
                 {
@@ -183,7 +183,7 @@ const Profile = () => {
         setMessage("Please wait!");
         setOpen(true);
         try {
-            await axios.post(`${process.env.REACT_APP_SECRET_KEY}/posts`, {
+            await axios.post(`${process.env.REACT_APP_SECRET_KEY}posts`, {
                 firstName: user.firstName,
                 lastName: user.lastName,
                 location: user.location,

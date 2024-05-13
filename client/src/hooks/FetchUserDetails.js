@@ -20,7 +20,7 @@ const useFetchUserDetails = (id) => {
 
     const getUser = async () => {
         try {
-            const res = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/users/${id}`, {
+            const res = await axios.get(`${process.env.REACT_APP_SECRET_KEY}users/${id}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: token,

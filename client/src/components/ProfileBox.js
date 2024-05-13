@@ -70,7 +70,8 @@ const ProfileBox = ({ user }) => {
 
                                 <span
                                     className='SpanNavigation'
-                                    onClick={() => navigate('/')}>
+                                    onClick={() => navigate('/')}
+                                >
                                     &nbsp;Home
                                 </span>
                             </Typography>
